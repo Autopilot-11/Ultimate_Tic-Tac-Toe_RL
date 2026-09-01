@@ -19,4 +19,10 @@ How do search and reinforcement-learning methods scale across a controlled famil
 Win/draw/loss, Elo, decision time, simulations per move, and documented failure cases.
 
 ## Status
-Stage 0: environment setup and project design.
+- [x] Stage 0: environment setup and project design
+- [x] Stage 1: G0 initial environment and random baseline
+  - Random self-play (1,000 games; seeds 0 and 1)
+  - X wins: 582
+  - O wins: 288
+  - Draws: 130
+- [x] 

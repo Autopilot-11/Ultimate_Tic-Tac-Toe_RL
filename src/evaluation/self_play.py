@@ -14,14 +14,21 @@ def play_game(x_agent, o_agent) -> int:
 
 
 def run_random_self_play(num_games: int = 1_000) -> dict[int, int]:
-    x_agent = RandomAgent(seed=0)
-    o_agent = RandomAgent(seed=1)
-    results = {X: 0, O: 0, EMPTY: 0}
+    # x_agent = RandomAgent(seed=0)
+    # o_agent = RandomAgent(seed=1)
+    # results = {X: 0, O: 0, EMPTY: 0}
 
+    # for _ in range(num_games):
+    #     winner = play_game(x_agent, o_agent)
+    #     results[winner] += 1
+
+    return run_match(RandomAgent(seed=0),RandomAgent(seed=1),num_games)
+
+def run_match(x_agent, o_agent, num_games: int) -> dict[int, int]:
+    results = {X: 0, O: 0, EMPTY: 0}
     for _ in range(num_games):
         winner = play_game(x_agent, o_agent)
         results[winner] += 1
-
     return results
 
 if __name__ == "__main__":

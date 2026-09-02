@@ -35,6 +35,13 @@ class Board:
         self.board[action] = self.current_player
         self.current_player *= -1
 
+    def clone(self) -> "Board":
+        """Return an independent copy of this game state."""
+        copied_game = Board()
+        copied_game.board = self.board.copy()
+        copied_game.current_player = self.current_player
+        return copied_game
+
     def legal_actions(self) -> list[int]:
         """Return every board index that may be played next."""
         return [action for action in range(9) if self.is_legal_move(action)]

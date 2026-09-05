@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ultimate Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="/static/styles.css?v=2">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header>
+        <p class="eyebrow">THIN PLAYABLE SHOWCASE</p>
+        <h1>Ultimate Tic-Tac-Toe</h1>
+        <p class="subtitle">You are X. Click a legal square; the random agent plays O.</p>
+      </header>
+
+      <section class="game-panel" aria-label="Ultimate Tic-Tac-Toe game">
+        <p id="status" class="status" aria-live="polite">Loading game…</p>
+        <div id="board" class="board" role="grid" aria-label="Ultimate Tic-Tac-Toe board"></div>
+        <button id="restart" type="button">Restart game</button>
+        <p id="routing" class="routing"></p>
+      </section>
+    </main>
+    <script src="/static/app.js?v=2"></script>
+  </body>
+</html>
